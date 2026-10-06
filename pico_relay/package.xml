@@ -3,8 +3,8 @@
 <package format="3">
   <name>pico_relay</name>
   <version>0.1.0</version>
-  <description>Framework ROS2 package for UAH SHC Two Month Rover Challenge 2023</description>
-  <maintainer email="tristanmcginnis26@gmail.com">tristan</maintainer>
+  <description>Example serial relay ROS2 node and Arduino sketch</description>
+  <maintainer email="ds0196@uah.edu">David</maintainer>
   <license>All Rights Reserved</license>
 
   <depend>rclpy</depend>

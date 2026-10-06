@@ -1,29 +1,27 @@
 /**
  * @brief Demo Two Month Pico code. Blinks an LED and responds to a few basic serial commands.
- * 
+ *
  */
 
-const uint32_t BLINK_INTERVAL = 1000;
 uint32_t lastBlink = 0;
 bool ledState = false;
 
 void setup() {
-  // Initialize LED_BUILTIN as an output
   pinMode(LED_BUILTIN, OUTPUT);
-  // Turn LED on for initialization
-  digitalWrite(LED_BUILTIN, !ledState);
+  // LED on during setup
+  digitalWrite(LED_BUILTIN, HIGH);
 
-  // Configure serial transport
+  // Configure serial for UART over USB
   Serial.begin(115200);
   delay(1000);
 
-  // Turn LED off after serial initialization
-  digitalWrite(LED_BUILTIN, ledState);
+  // LED off before loop
+  digitalWrite(LED_BUILTIN, LOW);
 }
 
 void loop() {
-  // Blink
-  if (millis() - lastBlink > BLINK_INTERVAL) {
+  // Blink on a timer
+  if (millis() - lastBlink > 1000) {
     lastBlink = millis();
     ledState = !ledState;
     digitalWrite(LED_BUILTIN, ledState);

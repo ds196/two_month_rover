@@ -13,9 +13,9 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='tristan',
-    maintainer_email='tristan@todo.todo',
-    description='TODO: Package description',
+    maintainer='David Sharpe',
+    maintainer_email='ds0196@uah.edu',
+    description='Example serial relay for TM Rover',
     license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={
